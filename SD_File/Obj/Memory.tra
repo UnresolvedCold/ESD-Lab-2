@@ -1,0 +1,33 @@
+*** Creating Trace Output File '.\Obj\Memory.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\obj\lpc2300.o"'
+### List of Objects: adding '".\obj\usb_config.o"'
+### List of Objects: adding '".\obj\file_config.o"'
+### List of Objects: adding '".\obj\usbd_lpc23xx.o"'
+### List of Objects: adding '".\obj\mci_lpc23xx.o"'
+### List of Objects: adding '".\obj\serial.o"'
+### List of Objects: adding '".\obj\lcd_4bit.o"'
+### List of Objects: adding '".\obj\retarget.o"'
+### List of Objects: adding '"..\..\..\..\..\..\..\..\RV31\LIB\FS_ARM_L.lib"'
+### List of Objects: adding '".\obj\usbd_user_msc.o"'
+### List of Objects: adding '"..\..\..\..\..\..\..\..\RV31\LIB\USB_ARM_L.lib"'
+### List of Objects: adding '".\obj\getline.o"'
+### List of Objects: adding '".\obj\sd_file.o"'
+### List of Objects: adding '".\obj\memory.o"'
+### ADS-LD Command completed:
+--cpu ARM7TDMI ".\obj\lpc2300.o" ".\obj\usb_config.o" ".\obj\file_config.o" ".\obj\usbd_lpc23xx.o" ".\obj\mci_lpc23xx.o" ".\obj\serial.o" ".\obj\lcd_4bit.o" ".\obj\retarget.o" C:\Keil\ARM\RV31\LIB\FS_ARM_L.lib ".\obj\usbd_user_msc.o" C:\Keil\ARM\RV31\LIB\USB_ARM_L.lib ".\obj\getline.o" ".\obj\sd_file.o" ".\obj\memory.o" 
+--strict --scatter ".\Obj\Memory.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Lst\Memory.map" -o .\Obj\Memory.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\Obj\Memory.axf'
+### ADS-LD Command File: '.\Obj\Memory.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\Obj\Memory.lnp', Handle=0x00000688
+### Writing '.lnp' file
+### ADS-LD Command file '.\Obj\Memory.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 10 errors
+### Updating obj list
+### LDADS_file() completed.

@@ -1,0 +1,151 @@
+Dependencies for Project 'Memory', Target 'MCB2300': (DO NOT MODIFY !)
+F (.\LPC2300.s)(0x50869A18)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\obj\lpc2300.o --depend .\obj\lpc2300.d)
+F (.\usb_config.c)(0x50FFC4E6)(--thumb -c --cpu ARM7TDMI -g -O3 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\obj\usb_config.o --omf_browse .\obj\usb_config.crf --depend .\obj\usb_config.d)
+I (C:\Keil\ARM\RV31\INC\usb_lib.c)(0x532CB7E8)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x532CB7E8)
+I (C:\Keil\ARM\RV31\INC\rl_usb.h)(0x532CB7E8)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
+I (C:\Keil\ARM\RL\USB\INC\usb.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_def.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_cdc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_cdc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_cls.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_desc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_event.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_cdc_acm.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_cls.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_hw.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbh.h)(0x532CB7EA)
+F (.\File_Config.c)(0x5FB74BD2)(--thumb -c --cpu ARM7TDMI -g -O3 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\obj\file_config.o --omf_browse .\obj\file_config.crf --depend .\obj\file_config.d)
+I (C:\Keil\ARM\RV31\INC\File_Config.h)(0x5FC07BC3)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x532CB7E8)
+I (C:\Keil\ARM\RV31\INC\File_lib.c)(0x532CB7E8)
+I (C:\Keil\ARM\ARMCC\include\absacc.h)(0x51C88A34)
+F (.\usbd_LPC23xx.c)(0x50FFC4E6)(--thumb -c --cpu ARM7TDMI -g -O3 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\obj\usbd_lpc23xx.o --omf_browse .\obj\usbd_lpc23xx.crf --depend .\obj\usbd_lpc23xx.d)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x532CB7E8)
+I (C:\Keil\ARM\RV31\INC\rl_usb.h)(0x532CB7E8)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
+I (C:\Keil\ARM\RL\USB\INC\usb.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_def.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_cdc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_cdc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_cls.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_desc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_event.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_cdc_acm.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_cls.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_hw.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbh.h)(0x532CB7EA)
+I (usbreg.h)(0x50FFC4E6)
+I (C:\Keil\ARM\Inc\Philips\LPC23xx.H)(0x532CB6B8)
+I (usb_config.c)(0x50FFC4E6)
+F (.\MCI_LPC23xx.c)(0x5FC3539A)(--thumb -c --cpu ARM7TDMI -g -O3 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\obj\mci_lpc23xx.o --omf_browse .\obj\mci_lpc23xx.crf --depend .\obj\mci_lpc23xx.d)
+I (C:\Keil\ARM\RV31\INC\File_Config.h)(0x5FC07BC3)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x532CB7E8)
+I (C:\Keil\ARM\Inc\Philips\LPC23xx.h)(0x532CB6B8)
+I (MCI_LPC23xx.h)(0x50FFC4E6)
+F (.\Serial.c)(0x50FFC4E6)(--thumb -c --cpu ARM7TDMI -g -O3 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\obj\serial.o --omf_browse .\obj\serial.crf --depend .\obj\serial.d)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x532CB7E8)
+I (C:\Keil\ARM\Inc\Philips\LPC23xx.H)(0x532CB6B8)
+I (SD_File.h)(0x50FFC4E6)
+I (Memory.h)(0x50FFC4E6)
+F (.\LCD_4bit.c)(0x50FFC4E6)(--thumb -c --cpu ARM7TDMI -g -O3 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\obj\lcd_4bit.o --omf_browse .\obj\lcd_4bit.crf --depend .\obj\lcd_4bit.d)
+I (C:\Keil\ARM\Inc\Philips\LPC23xx.H)(0x532CB6B8)
+F (.\Retarget.c)(0x50FFC4E6)(--thumb -c --cpu ARM7TDMI -g -O3 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-DSTDIO-o .\obj\retarget.o --omf_browse .\obj\retarget.crf --depend .\obj\retarget.d)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C88A34)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C88A34)
+I (C:\Keil\ARM\ARMCC\include\rt_sys.h)(0x51C88A34)
+I (C:\Keil\ARM\RV31\INC\File_Config.h)(0x5FC07BC3)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x532CB7E8)
+F (C:\Keil\ARM\RV31\LIB\FS_ARM_L.lib)(0x51776CE2)()
+F (.\usbd_user_msc.c)(0x5FC34D94)(--thumb -c --cpu ARM7TDMI -g -O3 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\obj\usbd_user_msc.o --omf_browse .\obj\usbd_user_msc.crf --depend .\obj\usbd_user_msc.d)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x532CB7E8)
+I (C:\Keil\ARM\RV31\INC\rl_usb.h)(0x532CB7E8)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
+I (C:\Keil\ARM\RL\USB\INC\usb.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_def.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_cdc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_cdc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_cls.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_desc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_event.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_cdc_acm.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_cls.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_hw.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbh.h)(0x532CB7EA)
+I (C:\Keil\ARM\RV31\INC\File_Config.h)(0x5FC07BC3)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C88A34)
+F (C:\Keil\ARM\RV31\LIB\USB_ARM_L.lib)(0x50FF9FCC)()
+F (.\Getline.c)(0x50FFC4E6)(--thumb -c --cpu ARM7TDMI -g -O3 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\obj\getline.o --omf_browse .\obj\getline.crf --depend .\obj\getline.d)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x532CB7E8)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C88A34)
+I (SD_File.h)(0x50FFC4E6)
+F (.\SD_File.c)(0x50FFC4E6)(--thumb -c --cpu ARM7TDMI -g -O3 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\obj\sd_file.o --omf_browse .\obj\sd_file.crf --depend .\obj\sd_file.d)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x532CB7E8)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C88A34)
+I (C:\Keil\ARM\ARMCC\include\ctype.h)(0x51C88A34)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C88A34)
+I (C:\Keil\ARM\RV31\INC\File_Config.h)(0x5FC07BC3)
+I (SD_File.h)(0x50FFC4E6)
+I (Memory.h)(0x50FFC4E6)
+F (.\Memory.c)(0x5FC352BA)(--thumb -c --cpu ARM7TDMI -g -O3 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\obj\memory.o --omf_browse .\obj\memory.crf --depend .\obj\memory.d)
+I (C:\Keil\ARM\Inc\Philips\LPC23xx.H)(0x532CB6B8)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x532CB7E8)
+I (C:\Keil\ARM\RV31\INC\File_Config.h)(0x5FC07BC3)
+I (C:\Keil\ARM\RV31\INC\rl_usb.h)(0x532CB7E8)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
+I (C:\Keil\ARM\RL\USB\INC\usb.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_def.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_cdc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usb_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_cdc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_core_cls.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_desc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_event.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_adc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_cdc_acm.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_hid.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_msc.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_cls.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbd_hw.h)(0x532CB7EA)
+I (C:\Keil\ARM\RL\USB\INC\usbh.h)(0x532CB7EA)
+I (SD_File.h)(0x50FFC4E6)
+I (Memory.h)(0x50FFC4E6)
+I (LCD.h)(0x50FFC4E6)
+F (.\Abstract.txt)(0x51416C6E)()

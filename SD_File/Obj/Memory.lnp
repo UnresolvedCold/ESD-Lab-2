@@ -1,0 +1,19 @@
+--cpu ARM7TDMI
+".\obj\lpc2300.o"
+".\obj\usb_config.o"
+".\obj\file_config.o"
+".\obj\usbd_lpc23xx.o"
+".\obj\mci_lpc23xx.o"
+".\obj\serial.o"
+".\obj\lcd_4bit.o"
+".\obj\retarget.o"
+"..\..\..\..\..\..\..\..\RV31\LIB\FS_ARM_L.lib"
+".\obj\usbd_user_msc.o"
+"..\..\..\..\..\..\..\..\RV31\LIB\USB_ARM_L.lib"
+".\obj\getline.o"
+".\obj\sd_file.o"
+".\obj\memory.o"
+--strict --scatter ".\Obj\Memory.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Lst\Memory.map" -o .\Obj\Memory.axf
