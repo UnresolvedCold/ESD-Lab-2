@@ -87,6 +87,7 @@ int main (void) {
   lcd_clear();
   lcd_print ("MCB2300 MSD Demo");
 //WakeUp=__TRUE;
+	//cmd_dir(NULL);
   while (1) {
 		
     if (WakeUp) {
@@ -96,9 +97,10 @@ int main (void) {
       set_cursor (0, 1);
 			LED_On(LED_MSK);
       lcd_print (" Term Interface ");       /* Term Interface */
-      sd_main();
+      //sd_main();
     } 
 	else {
+			LED_Off(LED_MSK);
       mc0 = ioc_getcb (NULL);
       if (ioc_init (mc0) == 0) {
         ioc_read_info (&info, mc0);
@@ -109,13 +111,16 @@ int main (void) {
           usbd_msc_init();
         }
         usbd_connect(__TRUE);               /* USB Device Connect */
-        set_cursor (0, 1);
+        set_cursor (0, 0);
         lcd_print ("  PC Interface  ");     /* PC Interface */
       } else {
         LED_On(LED_MSK);                    /* Card Failure! */
         set_cursor (0, 1);
         lcd_print (" Card Failure!  ");
+				
       }
+			
+			sd_main();
       while (!WakeUp);
     }
   }

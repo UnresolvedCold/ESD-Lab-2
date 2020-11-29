@@ -12,6 +12,10 @@
 #include <File_Config.h>
 #include <LPC23xx.h>                 /* LPC23xx/24xx definitions             */
 #include "MCI_LPC23xx.h"
+#include "LCD.h"
+#include <string.h>
+#include <stdio.h>
+#include "SD_File.h"
 
 /*----------------------------------------------------------------------------
   Memory Card FAT Driver instance definition
@@ -19,6 +23,7 @@
    mci1_drv: Second SD/MMC drive [M1:]
  *---------------------------------------------------------------------------*/
 int count12=0;
+char disp[5];
 #define __DRV_ID  mci0_drv
 #define __MCLK    48000000
 #define __CPUCLK  48000000
@@ -285,12 +290,24 @@ static BOOL WriteBlock (U32 bl, U8 *buf, U32 cnt) {
       if (GPDMA_RAW_INT_TCSTAT & 0x01) {
         /* Data transfer finished. */
 				count12++;
-				FIO2PIN=count12;
-				LED_On(1);
-				LED_Off(2);
+				lcd_clear();
+				set_cursor(7,1);
+				//cmd_dir();
+				sprintf(disp,"%d",count12);
+				//lcd_print(disp);
+				//cmd_dir(NULL);
+				
+				//FIO2PIN=count12;
+				//LED_On(1);
+				//LED_Off(2);
         break;
       }
     }
+		//cmd_dir(NULL);
+		if((MCI_STATUS & MCI_DATA_END)){
+			LED_On(6);
+			//cmd_dir(NULL);
+		}
 
     if (i == 0) {
       /* DMA Data Transfer timeout. */
@@ -303,9 +320,6 @@ static BOOL WriteBlock (U32 bl, U8 *buf, U32 cnt) {
 
     /* Wait until Data Block sent to Card. */
     while (MCI_STATUS != (MCI_DATA_END | MCI_DATA_BLK_END)) {
-			
-			
-			
       if (MCI_STATUS & (MCI_DATA_CRC_FAIL | MCI_DATA_TIMEOUT)) {
         /* Error while Data Block sending occured. */
         return (__FALSE);

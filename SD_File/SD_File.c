@@ -14,6 +14,7 @@
 #include <string.h>                   /* string and memory functions         */
 #include "File_Config.h"
 #include "SD_File.h"
+#include "LCD.h"
 
 #include "Memory.h"
 
@@ -23,11 +24,15 @@ static void cmd_type (char *par);
 static void cmd_rename (char *par);
 static void cmd_copy (char *par);
 static void cmd_delete (char *par);
-static void cmd_dir (char *par);
+void cmd_dir (char *par);
 static void cmd_format (char *par);
 static void cmd_help (char *par);
 static void cmd_fill (char *par);
 
+char file_count[10];
+int hit=0;
+int j;
+int info_size;
 /* Local constants */
 static const char intro[] =
   "\n\n\n\n\n\n\n\n"
@@ -389,42 +394,46 @@ static void cmd_delete (char *par) {
 /*----------------------------------------------------------------------------
  *        Print a Flash Memory Card Directory
  *---------------------------------------------------------------------------*/
-static void cmd_dir (char *par) {
+void cmd_dir (char *par) {
   U64 fsize;
   U32 files,dirs,i;
   char temp[32],*mask,*next,ch;
   FINFO info;
-
-  mask = get_entry (par, &next);
-  if (mask == NULL) {
+	//LED_On(10);
+	
+ 
+  //mask = get_entry (par, &next);
+  //if (mask == NULL) {
     mask = "*.*";
-  }
-
+  //}
+ 
   printf ("\nFile System Directory...");
   files = 0;
   dirs  = 0;
   fsize = 0;
   info.fileID  = 0;
   while (ffind (mask,&info) == 0) {
+		//LED_On(11);
     if (info.attrib & ATTR_DIRECTORY) {
       i = 0;
-      while (strlen((const char *)info.name+i) > 41) {
+      /*while (strlen((const char *)info.name+i) > 41) {
         ch = info.name[i+41];
         info.name[i+41] = 0;
         printf ("\n%-41s", &info.name[i]);
         info.name[i+41] = ch;
-        i += 41;
+        i += 41; 
       }
       printf ("\n%-41s    <DIR>       ", &info.name[i]);
       printf ("  %02d.%02d.%04d  %02d:%02d",
                info.time.day, info.time.mon, info.time.year,
-               info.time.hr, info.time.min);
+               info.time.hr, info.time.min); */
       dirs++;
+			
     }
     else {
       dot_format (info.size, &temp[0]);
       i = 0;
-      while (strlen((const char *)info.name+i) > 41) {
+      /*while (strlen((const char *)info.name+i) > 41) {
         ch = info.name[i+41];
         info.name[i+41] = 0;
         printf ("\n%-41s", &info.name[i]);
@@ -434,11 +443,17 @@ static void cmd_dir (char *par) {
       printf ("\n%-41s %14s ", &info.name[i], temp);
       printf ("  %02d.%02d.%04d  %02d:%02d",
                info.time.day, info.time.mon, info.time.year,
-               info.time.hr, info.time.min);
+               info.time.hr, info.time.min);*/
       fsize += info.size;
       files++;
     }
   }
+	info_size= sizeof(info);
+	sprintf(file_count,"%d",files);
+	set_cursor(0,1);
+	lcd_print(file_count);
+	//LED_On(files);
+	
   if (info.fileID == 0) {
     printf ("\nNo files...");
   }
@@ -521,11 +536,12 @@ static void init_card (void) {
 void sd_main (void) {
   char *sp,*cp,*next;
   U32 i;
-
+	//LED_On(7);
   printf (intro);                             /* display example info        */
   printf (help);
 
   init_card ();
+	cmd_dir(NULL);
   while (1) {
     if (WakeUp) {
       WakeUp = __FALSE;
@@ -539,7 +555,8 @@ void sd_main (void) {
       continue;
     }
 
-    sp = get_entry (&in_line[0], &next);
+    //sp = get_entry (&in_line[0], &next);
+		sp = "DIR";
     if (*sp == 0) {
       continue;
     }

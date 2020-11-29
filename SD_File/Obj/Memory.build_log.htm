@@ -1,0 +1,55 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\bits\Documents\SD_File_Firstwin1\Memory.uvproj
+Project File Date:  11/20/2020
+
+<h2>Output:</h2>
+Build target 'MCB2300'
+compiling usbd_user_msc.c...
+usbd_user_msc.c(39): warning:  #223-D: function "LED_Off" declared implicitly
+                LED_Off(0xFF);
+usbd_user_msc.c(42): warning:  #223-D: function "cmd_dir" declared implicitly
+                cmd_dir(NULL);
+usbd_user_msc.c(47): warning:  #223-D: function "LED_On" declared implicitly
+                LED_On(0xFF);
+usbd_user_msc.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=39064 RO-data=3436 RW-data=180 ZI-data=9548  
+".\Obj\Memory.axf" - 0 Error(s), 3 Warning(s).
+Load "C:\\Users\\bits\\Documents\\SD_File_Firstwin1\\Obj\\Memory.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+</pre>
+</body>
+</html>
+               LED_Off(0xFF);
+usbd_user_msc.c(48): warning:  #223-D: function "LED_On" declared implicitly
+                LED_On(0xFF);
+usbd_user_msc.c: 4 warnings, 0 errors
+compiling Getline.c...
+compiling SD_File.c...
+SD_File.c(454): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const unsigned char *"
+        lcd_print(file_count);
+SD_File.c(399): warning:  #550-D: variable "i" was set but never used
+    U32 files,dirs,i;
+SD_File.c(400): warning:  #177-D: variable "next" was declared but never referenced
+    char temp[32],*mask,*next,ch;
+SD_File.c(400): warning:  #177-D: variable "ch" was declared but never referenced
+    char temp[32],*mask,*next,ch;
+SD_File.c(537): warning: C4017W: next may be used before being set
+  char *sp,*cp,*next;
+SD_File.c: 5 warnings, 0 errors
+compiling Memory.c...
+linking...
+Program Size: Code=39068 RO-data=3436 RW-data=180 ZI-data=9548  
+".\Obj\Memory.axf" - 0 Error(s), 10 Warning(s).
+Load "C:\\Users\\bits\\Documents\\SD_File_Firstwin1\\Obj\\Memory.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...

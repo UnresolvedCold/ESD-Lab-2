@@ -25,3 +25,5 @@
 .\obj\usbd_user_msc.o: C:\Keil\ARM\ARMCC\bin\..\include\..\..\RL\USB\INC\usbh.h
 .\obj\usbd_user_msc.o: C:\Keil\ARM\RV31\INC\File_Config.h
 .\obj\usbd_user_msc.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\obj\usbd_user_msc.o: MCI_LPC23xx.h
+.\obj\usbd_user_msc.o: C:\Keil\ARM\Inc\Philips\LPC23xx.H

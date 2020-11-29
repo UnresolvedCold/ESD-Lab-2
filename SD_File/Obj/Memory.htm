@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Obj\Memory.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Obj\Memory.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sat Nov 28 23:54:03 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sun Nov 29 16:51:35 2020
 <BR><P>
 <H3>Maximum Stack Usage =       1032 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -25,7 +25,7 @@ Functions with no stack information
 <P>
 <H3>
 Mutually Recursive functions
-</H3> <LI><a href="#[83]">delay</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[83]">delay</a><BR>
+</H3> <LI><a href="#[85]">delay</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[85]">delay</a><BR>
  <LI><a href="#[f]">Undef_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[f]">Undef_Handler</a><BR>
  <LI><a href="#[10]">SWI_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[10]">SWI_Handler</a><BR>
  <LI><a href="#[11]">PAbt_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[11]">PAbt_Handler</a><BR>
@@ -652,76 +652,80 @@ Global Symbols
 <P><STRONG><a name="[96]"></a>getkey</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, serial.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_card
 <LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_format
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_read
 </UL>
 
-<P><STRONG><a name="[82]"></a>lcd_write_4bit</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, lcd_4bit.o(.text))
+<P><STRONG><a name="[84]"></a>lcd_write_4bit</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = lcd_write_4bit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
 </UL>
 
-<P><STRONG><a name="[84]"></a>lcd_write_cmd</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
+<P><STRONG><a name="[86]"></a>lcd_write_cmd</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = lcd_write_cmd &rArr; wait_while_busy &rArr; lcd_read_status
 </UL>
-<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_4bit
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_while_busy
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_4bit
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_while_busy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
 </UL>
 
-<P><STRONG><a name="[86]"></a>lcd_putchar</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
+<P><STRONG><a name="[88]"></a>lcd_putchar</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = lcd_putchar &rArr; wait_while_busy &rArr; lcd_read_status
 </UL>
-<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_4bit
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_while_busy
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_4bit
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_while_busy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_print
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
 </UL>
 
-<P><STRONG><a name="[87]"></a>lcd_init</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, lcd_4bit.o(.text))
+<P><STRONG><a name="[89]"></a>lcd_init</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = lcd_init &rArr; lcd_putchar &rArr; wait_while_busy &rArr; lcd_read_status
 </UL>
-<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_4bit
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_4bit
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[88]"></a>set_cursor</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, lcd_4bit.o(.text))
+<P><STRONG><a name="[81]"></a>set_cursor</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = set_cursor &rArr; lcd_write_cmd &rArr; wait_while_busy &rArr; lcd_read_status
 </UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
+<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_dir
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WriteBlock
 </UL>
 
-<P><STRONG><a name="[89]"></a>lcd_clear</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = lcd_clear &rArr; set_cursor &rArr; lcd_write_cmd &rArr; wait_while_busy &rArr; lcd_read_status
+<P><STRONG><a name="[80]"></a>lcd_clear</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = lcd_clear &rArr; lcd_write_cmd &rArr; wait_while_busy &rArr; lcd_read_status
 </UL>
-<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
+<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WriteBlock
 </UL>
 
 <P><STRONG><a name="[8a]"></a>lcd_print</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = lcd_print &rArr; lcd_putchar &rArr; wait_while_busy &rArr; lcd_read_status
 </UL>
-<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_dir
 </UL>
 
 <P><STRONG><a name="[8c]"></a>_ttywrch</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, retarget.o(.text))
@@ -825,36 +829,57 @@ Global Symbols
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MSC_MemoryRead
 </UL>
 
-<P><STRONG><a name="[a0]"></a>usbd_msc_write_sect</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, usbd_user_msc.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = usbd_msc_write_sect &rArr; ioc_write_sect &rArr; fs_chk_media
+<P><STRONG><a name="[a0]"></a>usbd_msc_write_sect</STRONG> (Thumb, 122 bytes, Stack size 32 bytes, usbd_user_msc.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 680 + Unknown Stack Size
+<LI>Call Chain = usbd_msc_write_sect &rArr; cmd_dir &rArr; ffind &rArr; fat_ffind &rArr; path_open &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ioc_write_sect
+<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ioc_write_sect
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_dir
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MSC_MemoryWrite
 </UL>
 
-<P><STRONG><a name="[a2]"></a>getline</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, getline.o(.text))
+<P><STRONG><a name="[a3]"></a>getline</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, getline.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272 + Unknown Stack Size
 <LI>Call Chain = getline &rArr; fflush &rArr; _do_fflush &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; fat_write &rArr; write_fat_link &rArr; cache_fat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getkey
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fflush
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fflush
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_main
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_capture
 </UL>
 
-<P><STRONG><a name="[bc]"></a>sd_main</STRONG> (Thumb, 154 bytes, Stack size 24 bytes, sd_file.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
-<LI>Call Chain = sd_main &rArr; getline &rArr; fflush &rArr; _do_fflush &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; fat_write &rArr; write_fat_link &rArr; cache_fat
+<P><STRONG><a name="[38]"></a>cmd_dir</STRONG> (Thumb, 180 bytes, Stack size 328 bytes, sd_file.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 648 + Unknown Stack Size
+<LI>Call Chain = cmd_dir &rArr; ffind &rArr; fat_ffind &rArr; path_open &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ffree
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ffind
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dot_format
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_print
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_main
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_msc_write_sect
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> sd_file.o(.constdata)
+</UL>
+<P><STRONG><a name="[bc]"></a>sd_main</STRONG> (Thumb, 148 bytes, Stack size 24 bytes, sd_file.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 672 + Unknown Stack Size
+<LI>Call Chain = sd_main &rArr; cmd_dir &rArr; ffind &rArr; fat_ffind &rArr; path_open &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_call_via_r1
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_card
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_entry
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_dir
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp (via Veneer)
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fflush
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fflush
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;toupper
 </UL>
@@ -866,17 +891,18 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> memory.o(.text)
 </UL>
-<P><STRONG><a name="[80]"></a>LED_On</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, memory.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WriteBlock
+<P><STRONG><a name="[83]"></a>LED_On</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, memory.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_msc_write_sect
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WriteBlock
 </UL>
 
-<P><STRONG><a name="[81]"></a>LED_Off</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, memory.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WriteBlock
+<P><STRONG><a name="[a1]"></a>LED_Off</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, memory.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_msc_write_sect
 </UL>
 
-<P><STRONG><a name="[16]"></a>main</STRONG> (Thumb, 194 bytes, Stack size 0 bytes, memory.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
-<LI>Call Chain = main &rArr; sd_main &rArr; getline &rArr; fflush &rArr; _do_fflush &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; fat_write &rArr; write_fat_link &rArr; cache_fat
+<P><STRONG><a name="[16]"></a>main</STRONG> (Thumb, 198 bytes, Stack size 0 bytes, memory.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 672 + Unknown Stack Size
+<LI>Call Chain = main &rArr; sd_main &rArr; cmd_dir &rArr; ffind &rArr; fat_ffind &rArr; path_open &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_init
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_connect
@@ -885,10 +911,10 @@ Global Symbols
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ioc_getcb
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_main
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_print
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_serial
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_msc_init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
@@ -897,11 +923,11 @@ Global Symbols
 
 <P><STRONG><a name="[1f6]"></a>__use_no_semihosting_swi</STRONG> (ARM, 4 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[a6]"></a>__aeabi_uldivmod</STRONG> (ARM, 0 bytes, Stack size 24 bytes, lludiv.o(.text))
+<P><STRONG><a name="[a7]"></a>__aeabi_uldivmod</STRONG> (ARM, 0 bytes, Stack size 24 bytes, lludiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __aeabi_uldivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fat_format (via Veneer)
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dot_format (via Veneer)
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dot_format (via Veneer)
 </UL>
 
 <P><STRONG><a name="[1f7]"></a>_ll_udiv</STRONG> (ARM, 720 bytes, Stack size 24 bytes, lludiv.o(.text), UNUSED)
@@ -926,13 +952,13 @@ Global Symbols
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_card
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_help
 <LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_format
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_dir
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_delete
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_copy
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_rename
 <LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_type
 <LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_fill
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_capture
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_dir
 </UL>
 
 <P><STRONG><a name="[ae]"></a>__2fprintf</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, __2fprintf.o(.text))
@@ -944,14 +970,16 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_fill
 </UL>
 
-<P><STRONG><a name="[a7]"></a>__2sprintf</STRONG> (Thumb, 40 bytes, Stack size 32 bytes, __2sprintf.o(.text))
+<P><STRONG><a name="[82]"></a>__2sprintf</STRONG> (Thumb, 40 bytes, Stack size 32 bytes, __2sprintf.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
 <LI>Call Chain = __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dot_format
+<BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dot_format
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_dir
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WriteBlock
 </UL>
 
 <P><STRONG><a name="[c8]"></a>_printf_pre_padding</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, _printf_pad.o(.text))
@@ -959,8 +987,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_call_via_r2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
+<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
 </UL>
 
 <P><STRONG><a name="[ca]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, _printf_pad.o(.text))
@@ -968,8 +996,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_call_via_r2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
+<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
 </UL>
 
 <P><STRONG><a name="[cb]"></a>_printf_str</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, _printf_str.o(.text))
@@ -985,10 +1013,10 @@ Global Symbols
 <P><STRONG><a name="[46]"></a>_printf_int_dec</STRONG> (Thumb, 94 bytes, Stack size 32 bytes, _printf_dec.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = _printf_int_dec &rArr; _printf_int_common &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_unsigned (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_unsigned (Weak Reference)
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_signed (Weak Reference)
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_udiv10 (via Veneer)
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
 </UL>
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_d (via Veneer)
 </UL>
@@ -1043,18 +1071,18 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fflush
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fseek
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fflush
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fflush
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_flushlinebuffered
 </UL>
 
-<P><STRONG><a name="[a4]"></a>fflush</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, fflush.o(.text))
+<P><STRONG><a name="[a5]"></a>fflush</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, fflush.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248 + Unknown Stack Size
 <LI>Call Chain = fflush &rArr; _do_fflush &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; fat_write &rArr; write_fat_link &rArr; cache_fat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_do_fflush
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_main
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
 </UL>
 
 <P><STRONG><a name="[ab]"></a>fputs</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, fputs.o(.text))
@@ -1065,13 +1093,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_capture
 </UL>
 
-<P><STRONG><a name="[a3]"></a>putc</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, putc.o(.text))
+<P><STRONG><a name="[a4]"></a>putc</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, putc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = putc &rArr; fputc &rArr; __flsbuf_byte
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_type
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
 </UL>
 
 <P><STRONG><a name="[d9]"></a>freopen</STRONG> (Thumb, 152 bytes, Stack size 32 bytes, fopen.o(.text))
@@ -1141,7 +1169,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strlen
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ffind
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_dir
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_delete
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_rename
 <LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;path_create
@@ -1305,9 +1332,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_locale
 </UL>
-<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tolower (via Veneer)
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;toupper (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;toupper (via Veneer)
 <LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isspace (via Veneer)
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tolower (via Veneer)
 </UL>
 
 <P><STRONG><a name="[db]"></a>malloc</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, h1_alloc.o(.text))
@@ -1356,12 +1383,12 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
 </UL>
 
 <P><STRONG><a name="[19]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, _sputc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> __2sprintf.o(.text)
 </UL>
@@ -1791,8 +1818,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_WriteEP
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Setup_MSC_ReqToIF
-<LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
+<BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Setup_MSC_ReqToIF
 </UL>
 
 <P><STRONG><a name="[114]"></a>USBD_DataOutStage</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, usbd_core.o(i.USBD_DataOutStage))
@@ -1806,9 +1833,7 @@ Global Symbols
 <P><STRONG><a name="[21]"></a>USBD_EndPoint0</STRONG> (Thumb, 618 bytes, Stack size 24 bytes, usbd_core.o(i.USBD_EndPoint0))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = USBD_EndPoint0 &rArr; USBD_ReqSetClrFeature &rArr; USBD_ReqClrFeature_MSC &rArr; USBD_MSC_ClrStallEP &rArr; USBD_WriteEP &rArr; WrCmdEP
 </UL>
-<BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Setup_MSC_ReqToIF
-<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8 (via Veneer)
-<LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_StatusOutStage
+<BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_StatusOutStage
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_StatusInStage
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_SetupStage
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqSetInterface
@@ -1838,6 +1863,8 @@ Global Symbols
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Setup_ADC_ReqToIF
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Out_HID_ReqToIF
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Setup_HID_ReqToIF
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Setup_MSC_ReqToIF
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8 (via Veneer)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usb_config.o(.constdata)
 </UL>
@@ -1875,8 +1902,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[138]"></a>USBD_MSC_BulkOut</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, usbd_msc.o(i.USBD_MSC_BulkOut))
-<BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
-<LI>Call Chain = USBD_MSC_BulkOut &rArr; USBD_MSC_GetCBW &rArr; USBD_MSC_ServiceActionIn16 &rArr; USBD_MSC_DataInFormat &rArr; USBD_MSC_SetCSW &rArr; USBD_WriteEP &rArr; WrCmdEP
+<BR><BR>[Stack]<UL><LI>Max Depth = 712 + Unknown Stack Size
+<LI>Call Chain = USBD_MSC_BulkOut &rArr; USBD_MSC_MemoryWrite &rArr; usbd_msc_write_sect &rArr; cmd_dir &rArr; ffind &rArr; fat_ffind &rArr; path_open &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MSC_SetStallEP
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MSC_SetCSW
@@ -1947,8 +1974,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[13f]"></a>USBD_MSC_EP_BULKOUT_Event</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, usbd_msc.o(i.USBD_MSC_EP_BULKOUT_Event))
-<BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
-<LI>Call Chain = USBD_MSC_EP_BULKOUT_Event &rArr; USBD_MSC_BulkOut &rArr; USBD_MSC_GetCBW &rArr; USBD_MSC_ServiceActionIn16 &rArr; USBD_MSC_DataInFormat &rArr; USBD_MSC_SetCSW &rArr; USBD_WriteEP &rArr; WrCmdEP
+<BR><BR>[Stack]<UL><LI>Max Depth = 720 + Unknown Stack Size
+<LI>Call Chain = USBD_MSC_EP_BULKOUT_Event &rArr; USBD_MSC_BulkOut &rArr; USBD_MSC_MemoryWrite &rArr; usbd_msc_write_sect &rArr; cmd_dir &rArr; ffind &rArr; fat_ffind &rArr; path_open &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReadEP
 <LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MSC_BulkOut
@@ -1957,8 +1984,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[22]"></a>USBD_MSC_EP_BULK_Event</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, usbd_msc.o(i.USBD_MSC_EP_BULK_Event))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
-<LI>Call Chain = USBD_MSC_EP_BULK_Event &rArr; USBD_MSC_EP_BULKOUT_Event &rArr; USBD_MSC_BulkOut &rArr; USBD_MSC_GetCBW &rArr; USBD_MSC_ServiceActionIn16 &rArr; USBD_MSC_DataInFormat &rArr; USBD_MSC_SetCSW &rArr; USBD_WriteEP &rArr; WrCmdEP
+<BR><BR>[Stack]<UL><LI>Max Depth = 728 + Unknown Stack Size
+<LI>Call Chain = USBD_MSC_EP_BULK_Event &rArr; USBD_MSC_EP_BULKOUT_Event &rArr; USBD_MSC_BulkOut &rArr; USBD_MSC_MemoryWrite &rArr; usbd_msc_write_sect &rArr; cmd_dir &rArr; ffind &rArr; fat_ffind &rArr; path_open &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MSC_EP_BULKOUT_Event
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MSC_BulkIn
@@ -2045,8 +2072,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[13a]"></a>USBD_MSC_MemoryWrite</STRONG> (Thumb, 208 bytes, Stack size 24 bytes, usbd_msc.o(i.USBD_MSC_MemoryWrite))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
-<LI>Call Chain = USBD_MSC_MemoryWrite &rArr; USBD_MSC_CheckMedia &rArr; USBD_MSC_SetCSW &rArr; USBD_WriteEP &rArr; WrCmdEP
+<BR><BR>[Stack]<UL><LI>Max Depth = 704 + Unknown Stack Size
+<LI>Call Chain = USBD_MSC_MemoryWrite &rArr; usbd_msc_write_sect &rArr; cmd_dir &rArr; ffind &rArr; fat_ffind &rArr; path_open &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_msc_write_sect
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod (via Veneer)
@@ -2221,8 +2248,8 @@ Global Symbols
 <P><STRONG><a name="[11b]"></a>USBD_ReqGetDescriptor</STRONG> (Thumb, 306 bytes, Stack size 24 bytes, usbd_core.o(i.USBD_ReqGetDescriptor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USBD_ReqGetDescriptor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8 (via Veneer)
-<LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqGetDescriptor_HID
+<BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqGetDescriptor_HID
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8 (via Veneer)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
@@ -2236,10 +2263,10 @@ Global Symbols
 <P><STRONG><a name="[119]"></a>USBD_ReqSetClrFeature</STRONG> (Thumb, 162 bytes, Stack size 16 bytes, usbd_core.o(i.USBD_ReqSetClrFeature))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = USBD_ReqSetClrFeature &rArr; USBD_ReqClrFeature_MSC &rArr; USBD_MSC_ClrStallEP &rArr; USBD_WriteEP &rArr; WrCmdEP
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqClrFeature_MSC
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ClrStallEP
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ClrStallEP
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_SetStallEP
 <LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_WakeUpCfg
+<LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReqClrFeature_MSC
 </UL>
 <BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
 </UL>
@@ -2280,8 +2307,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_WriteEP
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Setup_MSC_ReqToIF
-<LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
+<BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EndPoint0_Setup_MSC_ReqToIF
 </UL>
 
 <P><STRONG><a name="[128]"></a>USBD_StatusOutStage</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, usbd_core.o(i.USBD_StatusOutStage))
@@ -2316,17 +2343,17 @@ Global Symbols
 <LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fat_format
 <LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_drv
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ioc_init
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_str
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__vfscanf
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_common
 </UL>
 
 <P><STRONG><a name="[172]"></a>__ARM_common_call_via_r3</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, fs_ioc.o(i.__ARM_common_call_via_r3))
 <BR><BR>[Called By]<UL><LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fat_format
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ioc_write_sect
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ioc_write_sect
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ioc_read_sect
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mci_WriteSector
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mci_ReadSector
@@ -2565,7 +2592,7 @@ Global Symbols
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod (via Veneer)
 <LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr (via Veneer)
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset (via Veneer)
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod (via Veneer)
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod (via Veneer)
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fs_find_drv
 <LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_cache
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_u32
@@ -2782,7 +2809,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__flsbuf_byte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
+<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputs
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> _printf_char_file.o(.text)
@@ -2828,7 +2855,7 @@ Global Symbols
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fat_read
 <LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fat_close
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ioc_read_info
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ioc_write_sect
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ioc_write_sect
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ioc_read_sect
 </UL>
 
@@ -2931,7 +2958,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usbd_msc_read_sect
 </UL>
 
-<P><STRONG><a name="[a1]"></a>ioc_write_sect</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, fs_ioc.o(i.ioc_write_sect))
+<P><STRONG><a name="[a2]"></a>ioc_write_sect</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, fs_ioc.o(i.ioc_write_sect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = ioc_write_sect &rArr; fs_chk_media
 </UL>
 <BR>[Calls]<UL><LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fs_chk_media
@@ -3233,50 +3260,51 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mci_lpc23xx.o(.constdata)
 </UL>
-<P><STRONG><a name="[31]"></a>WriteBlock</STRONG> (Thumb, 124 bytes, Stack size 32 bytes, mci_lpc23xx.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = WriteBlock
+<P><STRONG><a name="[31]"></a>WriteBlock</STRONG> (Thumb, 146 bytes, Stack size 32 bytes, mci_lpc23xx.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
+<LI>Call Chain = WriteBlock &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
+<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DmaStart
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mci_lpc23xx.o(.constdata)
 </UL>
 <P><STRONG><a name="[32]"></a>CheckMedia</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, mci_lpc23xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> mci_lpc23xx.o(.constdata)
 </UL>
-<P><STRONG><a name="[83]"></a>delay</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lcd_4bit.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+<P><STRONG><a name="[85]"></a>delay</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lcd_4bit.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_4bit
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_4bit
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_read_status
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 </UL>
 
-<P><STRONG><a name="[85]"></a>wait_while_busy</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
+<P><STRONG><a name="[87]"></a>wait_while_busy</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = wait_while_busy &rArr; lcd_read_status
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_read_status
 </UL>
-<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
+<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
 </UL>
 
 <P><STRONG><a name="[8b]"></a>lcd_read_status</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = lcd_read_status
 </UL>
-<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_while_busy
+<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_while_busy
 </UL>
 
 <P><STRONG><a name="[a8]"></a>get_entry</STRONG> (Thumb, 116 bytes, Stack size 12 bytes, sd_file.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = get_entry
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sd_main
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_format
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_dir
+<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_format
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_delete
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_copy
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_rename
@@ -3285,15 +3313,15 @@ Local Symbols
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_capture
 </UL>
 
-<P><STRONG><a name="[a5]"></a>dot_format</STRONG> (Thumb, 176 bytes, Stack size 24 bytes, sd_file.o(.text))
+<P><STRONG><a name="[a6]"></a>dot_format</STRONG> (Thumb, 176 bytes, Stack size 24 bytes, sd_file.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = dot_format &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_dir
-<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_copy
+<BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_copy
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_dir
 </UL>
 
 <P><STRONG><a name="[33]"></a>cmd_capture</STRONG> (Thumb, 142 bytes, Stack size 16 bytes, sd_file.o(.text))
@@ -3301,7 +3329,7 @@ Local Symbols
 <LI>Call Chain = cmd_capture &rArr; fopen &rArr; freopen &rArr; _sys_open &rArr; __sys_open &rArr; fat_open &rArr; path_create &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_entry
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getline
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp (via Veneer)
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
@@ -3330,7 +3358,7 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_entry
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -3352,7 +3380,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 1032 + Unknown Stack Size
 <LI>Call Chain = cmd_copy &rArr; fopen &rArr; freopen &rArr; _sys_open &rArr; __sys_open &rArr; fat_open &rArr; path_create &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dot_format
+<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dot_format
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_entry
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp (via Veneer)
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose
@@ -3368,19 +3396,6 @@ Local Symbols
 <LI>Call Chain = cmd_delete &rArr; fdelete &rArr; fat_delete &rArr; path_open &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fdelete
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_entry
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> sd_file.o(.constdata)
-</UL>
-<P><STRONG><a name="[38]"></a>cmd_dir</STRONG> (Thumb, 332 bytes, Stack size 352 bytes, sd_file.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 672 + Unknown Stack Size
-<LI>Call Chain = cmd_dir &rArr; ffind &rArr; fat_ffind &rArr; path_open &rArr; frec_find &rArr; entry_pos_set &rArr; set_next_clus &rArr; cache_fat
-</UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ffree
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ffind
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dot_format
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_entry
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
@@ -3411,7 +3426,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> sd_file.o(.constdata)
 </UL>
-<P><STRONG><a name="[ba]"></a>init_card</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, sd_file.o(.text))
+<P><STRONG><a name="[ba]"></a>init_card</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, sd_file.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184 + Unknown Stack Size
 <LI>Call Chain = init_card &rArr; cmd_format &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -3915,8 +3930,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = name_nt_gen
 </UL>
-<BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8 (via Veneer)
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod (via Veneer)
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8 (via Veneer)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;path_create
 </UL>
